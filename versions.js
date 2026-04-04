@@ -40,7 +40,7 @@ window.TASKFLOW_RELEASES = [
       {
         label: "Universal",
         arch:  "universal",
-        url:   "https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/V1.1/TaskFlowMac.dmg"
+        url:   "https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/v1.1.0/TaskFlowMac.dmg"
       },
     ],
     notes: [
@@ -75,7 +75,7 @@ window.TASKFLOW_RELEASES = [
       {
         label: "Universal",
         arch:  "universal",
-        url:   "https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/V1.0/TaskFlow_MacV1.0.0.dmg"
+        url:   "https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/v1.0.0/TaskFlow_MacV1.0.0.dmg"
       }
     ],
     notes: [
