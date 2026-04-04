@@ -28,27 +28,29 @@
 
 window.TASKFLOW_RELEASES = [
 
-  /* ── V1.1 ──────────────────────────────────────────────── */
+  /* ── V1.1.0 ──────────────────────────────────────────────── */
   {
     version: "1.1.0",
-    label:   "V1.1",
-    date:    "March 28, 2026",
-    size:    "15.2 MB",
-    minOS:   "macOS 12+",
+    label:   "V1.1.0",
+    date:    "April 4, 2026",
+    size:    "2.59 MB",
+    minOS:   "macOS 15.7+",
     latest:  true,
     downloads: [
       {
-        label: "Apple Silicon",
-        arch:  "arm64",
-        url:   "https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/V1.1/TaskFlow_MacV1.1_arm64.dmg"
+        label: "Universal",
+        arch:  "universal",
+        url:   "https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/V1.1/TaskFlowMac.dmg"
       },
-      {
-        label: "Intel Mac",
-        arch:  "x86_64",
-        url:   "https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/V1.1/TaskFlow_MacV1.1_x86.dmg"
-      }
     ],
     notes: [
+      { type: "new",    text: "Introduction of custom keyboard shortcuts, configurable within the app’s settings." },
+      { type: "new",    text: "The Pomodoro Timer now features colour changes as the estimated time approaches." },
+      { type: "change",    text: "Completed tasks for the day will now display a strikethrough and be visible in both the “Completed” and “All Tasks” tabs." },
+      { type: "change",    text: "Users can now mark tasks as complete by directly clicking the checkmark." },
+      { type: "change", text: "Enhancements to the user interface for tasks." }
+      
+      /*
       { type: "new",    text: "Recurring tasks — set daily, weekly or custom schedules" },
       { type: "new",    text: "Quick-add widget for the macOS menu bar" },
       { type: "new",    text: "Tag filtering: filter your task list by one or more tags instantly" },
@@ -56,31 +58,32 @@ window.TASKFLOW_RELEASES = [
       { type: "fix",    text: "Fixed a crash when deleting the last task in a project" },
       { type: "fix",    text: "Progress bar now updates correctly after drag-reordering tasks" },
       { type: "change", text: "Keyboard shortcut for new task changed to ⌘N (was ⌘T)" }
+       */
+
     ]
   },
 
-  /* ── V1.0 ──────────────────────────────────────────────── */
+  /* ── V1.0.0 ──────────────────────────────────────────────── */
   {
     version: "1.0.0",
-    label:   "V1.0",
-    date:    "January 10, 2026",
-    size:    "14.0 MB",
-    minOS:   "macOS 12+",
+    label:   "V1.0.0",
+    date:    "Appril 4, 2026",
+    size:    "13.8 MB",
+    minOS:   "macOS 15.7+",
     latest:  false,
     downloads: [
       {
         label: "Universal",
         arch:  "universal",
-        url:   "https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/V1.0/TaskFlow_MacV1.0.dmg"
+        url:   "https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/V1.0/TaskFlow_MacV1.0.0.dmg"
       }
     ],
     notes: [
       { type: "new",  text: "Initial public release of TaskFlow for macOS" },
-      { type: "new",  text: "Lightning Capture — add tasks in under a second via global shortcut" },
-      { type: "new",  text: "Built-in Pomodoro timer with custom work/break intervals" },
+      { type: "new",  text: "Built-in Pomodoro timer with custom time" },
       { type: "new",  text: "Smart Projects with tags, priorities and deadlines" },
       { type: "new",  text: "100% local storage — no account, no cloud, no tracking" },
-      { type: "new",  text: "Full keyboard navigation throughout the app" }
+      { type: "change", text: "Removed all default subjects" },
     ]
   }
 
