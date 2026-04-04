@@ -67,7 +67,7 @@ window.TASKFLOW_RELEASES = [
   {
     version: "1.0.0",
     label:   "V1.0.0",
-    date:    "Appril 4, 2026",
+    date:    "April 4, 2026",
     size:    "13.8 MB",
     minOS:   "macOS 15.7+",
     latest:  false,
