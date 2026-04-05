@@ -28,14 +28,35 @@
 
 window.TASKFLOW_RELEASES = [
 
+    /* ── V1.1.1 ──────────────────────────────────────────────── */
+  {
+    version: "1.1.1",
+    label:   "V1.1.1",
+    date:    "April 5, 2026",
+    size:    "2.7 MB",
+    minOS:   "macOS 15.7+",
+    latest:  true,
+    downloads: [
+      {
+        label: "Universal",
+        arch:  "universal",
+        url:   "https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/v1.1.1/TaskFlowMac.dmg"
+      },
+    ],
+    notes: [
+      { type: "fix", text: "Fixed some known bugs." },
+      { type: "change", text: "Enhanced sidebar navigation for smoother performance." },
+    ]
+  },
+
   /* ── V1.1.0 ──────────────────────────────────────────────── */
   {
     version: "1.1.0",
     label:   "V1.1.0",
     date:    "April 4, 2026",
-    size:    "2.59 MB",
+    size:    "2.7 MB",
     minOS:   "macOS 15.7+",
-    latest:  true,
+    latest:  false,
     downloads: [
       {
         label: "Universal",
