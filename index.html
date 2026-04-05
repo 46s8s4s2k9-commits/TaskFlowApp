@@ -255,7 +255,7 @@
     /* Scroll hint */
     .scroll-hint {
       position: absolute;
-      bottom: 36px;
+      bottom: 48px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -854,15 +854,15 @@
       </svg>
       Download for Mac — Free
     </a>
-    <div class="download-meta">
+    <div class="download-meta" id="heroMeta">
       <span>
         <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1 13.5v-7l6 3.5-6 3.5z"/></svg>
         macOS 12+
       </span>
       <div class="dot"></div>
-      <span>Version 1.0</span>
+      <span id="heroVersion">Version 1.0</span>
       <div class="dot"></div>
-      <span>~14 MB</span>
+      <span id="heroSize">~14 MB</span>
     </div>
   </div>
 
@@ -951,7 +951,7 @@
     <div class="section-label">Interface</div>
     <div class="section-title">Clean by<br>design</div>
     <p class="mockup-body">No clutter. No bloat. TaskFlow shows you exactly what you need — nothing more. A task manager that gets out of your way so you can do the actual work.</p>
-    <a class="btn-download" href="https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/V1.0/TaskFlow_MacV1.0.dmg" style="display: inline-flex; font-size: 0.85rem; padding: 14px 28px;">
+    <a class="btn-download" href="https://github.com/46s8s4s2k9-commits/TaskFlowApp/releases/download/V1.0/TaskFlow_MacV1.0.dmg" id="mockupDownload" style="display: inline-flex; font-size: 0.85rem; padding: 14px 28px;">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
       </svg>
@@ -1058,6 +1058,18 @@
     const heroBtn = document.getElementById('mainDownload');
     if (heroBtn && latest.downloads.length) {
       heroBtn.href = latest.downloads[0].url;
+    }
+
+    /* Update hero version and size */
+    const heroVersion = document.getElementById('heroVersion');
+    if (heroVersion) heroVersion.textContent = `V${latest.version}`;
+    const heroSize = document.getElementById('heroSize');
+    if (heroSize) heroSize.textContent = latest.size;
+
+    /* Update mockup section download link */
+    const mockupBtn = document.getElementById('mockupDownload');
+    if (mockupBtn && latest.downloads.length) {
+      mockupBtn.href = latest.downloads[0].url;
     }
 
     /* Badge icons per note type */
