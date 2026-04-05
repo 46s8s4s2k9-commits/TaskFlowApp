@@ -253,11 +253,14 @@
     .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--border); }
 
     /* Scroll hint */
+    .scroll-hint-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: auto;
+      padding-bottom: 36px;
+    }
     .scroll-hint {
-      position: absolute;
-      bottom: 48px;
-      left: 50%;
-      transform: translateX(-50%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -857,7 +860,7 @@
     <div class="download-meta" id="heroMeta">
       <span>
         <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1 13.5v-7l6 3.5-6 3.5z"/></svg>
-        macOS 12+
+        <span id="heroMinOS">macOS 12+</span>
       </span>
       <div class="dot"></div>
       <span id="heroVersion">Version 1.0</span>
@@ -866,9 +869,11 @@
     </div>
   </div>
 
-  <div class="scroll-hint">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
+  <div class="scroll-hint-wrapper">
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
   </div>
 </section>
 
@@ -1065,6 +1070,8 @@
     if (heroVersion) heroVersion.textContent = `V${latest.version}`;
     const heroSize = document.getElementById('heroSize');
     if (heroSize) heroSize.textContent = latest.size;
+    const heroMinOS = document.getElementById('heroMinOS');
+    if (heroMinOS) heroMinOS.textContent = latest.minOS;
 
     /* Update mockup section download link */
     const mockupBtn = document.getElementById('mockupDownload');
